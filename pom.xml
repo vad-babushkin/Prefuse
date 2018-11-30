@@ -5,9 +5,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>Prefuse</groupId>
-	<artifactId>parent</artifactId>
+	<artifactId>Prefuse</artifactId>
 	<version>1.0</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<repositories>
 		<repository>
@@ -190,9 +190,26 @@
 		<!--<version>${log4j-over-slf4j.version}</version>-->
 		<!--</dependency>-->
 
+		<!--JDBC-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.45</version>
+			<!--<version>${mysql-connector-java.version}</version>-->
+			<!--<scope>compile</scope>-->
+		</dependency>
+
+		<!--LUCENE-->
+		<dependency>
+			<groupId>lucene</groupId>
+			<artifactId>lucene</artifactId>
+			<version>1.4.3</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
+		<!--<sourceDirectory></sourceDirectory>-->
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -228,6 +245,26 @@
 						<goals>
 							<goal>clean</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/demo/java</source>
+							</sources>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -272,9 +309,5 @@
 		<prefuse-pleyades.version>1.0</prefuse-pleyades.version>
 
 	</properties>
-	
-    <modules>
-        <module>prefuse-core</module>
-    </modules>
-	
+
 </project>

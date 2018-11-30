@@ -12,7 +12,7 @@ public class ZipDecode extends JPrefuseApplet {
 		DelimitedTextTableReader tr = new DelimitedTextTableReader();
 		Table t = null;
 		try {
-			t = tr.readTable("/zipcode.txt");
+			t = tr.readTable("data/zipcode.txt");
 		} catch (DataIOException e) {
 			e.printStackTrace();
 			System.exit(1);

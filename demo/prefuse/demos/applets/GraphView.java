@@ -56,7 +56,7 @@ public class GraphView extends JPrefuseApplet {
 
 	public void init() {
 		UILib.setPlatformLookAndFeel();
-		JComponent graphview = demo("/socialnet.xml", "name");
+		JComponent graphview = demo("data/socialnet.xml", "name");
 		this.getContentPane().add(graphview);
 	}
 

@@ -7,7 +7,7 @@ public class RadialGraphView extends JPrefuseApplet {
 
 	public void init() {
 		this.setContentPane(
-				prefuse.demos.RadialGraphView.demo("/socialnet.xml", "name"));
+				prefuse.demos.RadialGraphView.demo("data/socialnet.xml", "name"));
 	}
 
 } // end of class RadialGraphView

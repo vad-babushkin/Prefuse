@@ -7,7 +7,7 @@ public class TreeView extends JPrefuseApplet {
 
 	public void init() {
 		this.setContentPane(
-				prefuse.demos.TreeView.demo("/chi-ontology.xml.gz", "name"));
+				prefuse.demos.TreeView.demo("data/chi-ontology.xml.gz", "name"));
 	}
 
 } // end of class TreeView

@@ -11,7 +11,7 @@ public class Congress extends JPrefuseApplet {
 		// load the data
 		Table t = null;
 		try {
-			t = new DelimitedTextTableReader().readTable("/fec.txt");
+			t = new DelimitedTextTableReader().readTable("data/fec.txt");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.exit(1);

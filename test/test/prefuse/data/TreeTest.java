@@ -1,5 +1,6 @@
 package test.prefuse.data;
 
+import java.io.FileInputStream;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.zip.GZIPInputStream;
@@ -19,14 +20,13 @@ import prefuse.util.ui.JPrefuseTable;
 
 public class TreeTest extends TestCase {
 
-	public static final String TREE_CHI = "/chi-ontology.xml.gz";
+	public static final String TREE_CHI = "data/chi-ontology.xml.gz";
 
 	public void testTreeReader() {
 		// load tree
-		URL url = TreeMap.class.getResource(TREE_CHI);
 		Tree t = null;
 		try {
-			GZIPInputStream gzin = new GZIPInputStream(url.openStream());
+			GZIPInputStream gzin = new GZIPInputStream(new FileInputStream(TREE_CHI));
 			t = (Tree) new TreeMLReader().readGraph(gzin);
 		} catch (Exception e) {
 			e.printStackTrace();

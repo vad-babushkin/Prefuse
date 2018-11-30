@@ -209,7 +209,9 @@
 	</dependencies>
 
 	<build>
-		<!--<sourceDirectory></sourceDirectory>-->
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
+
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -262,7 +264,7 @@
 						</goals>
 						<configuration>
 							<sources>
-								<source>src/demo/java</source>
+								<source>demo</source>
 							</sources>
 						</configuration>
 					</execution>

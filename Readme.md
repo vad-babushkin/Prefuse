@@ -19,10 +19,5 @@ Prefuse is licensed under the terms of a [BSD license](prefuse-core/license-pref
 both commercial and non-commercial purposes. The original website is at [prefuse.org](http://prefuse.org/).
 
 This project is a fork which aims at providing easy maven access for several projects which depend on Prefuse. 
+
 All changes are released under the same original license.
-
-# Modules
-
-## prefuse-core
-
-Copy of original project [prefuse/Prefuse](https://github.com/prefuse/Prefuse) with refactoring
